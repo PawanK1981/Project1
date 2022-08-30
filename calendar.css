@@ -1,55 +1,67 @@
- 
+  
 #cal-wrap * { font-family: arial, sans-serif; }
-.ninja { display: none !important; }
+.ninja { display: none !important;  margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
  
-#cal-wrap {width: 50%;  margin: 5% 24%;  }
-
+ 
  #heading{
   text-align: center;
-  border: none;
-  font-size: 40PX;
+  
+  font-size: 30PX;
  }
-#cal-date { display: flex; justify-content: center;  border: #ea4c4c 2px solid; border-radius: 4px;}
+#cal-date { display: flex; justify-content: space-between;   border: #ea4c4c 2px solid; border-radius: 4px;}
 #cal-mth, #cal-yr {
   box-sizing: border-box;
-  padding: 0px 60px;
-    margin: 4PX 4%;
   border: 2px solid black;
   background-color:GRAY;
   border-radius:4px ;
   font-size: 1.2em;
-
-  
   border: 2px solid lightsalmon;
+ 
 }
-H2{
-    background-color: lightgray;
-    border: 2px solid lightblue;
-    border-radius: 4px;
-    padding: 7px;
+ 
+.main{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100vw;
+  height: 100vh;
+  flex-direction:column;
+ 
 }
-/* (D) CALENDAR */
-#calendar {
-  width: 100%;
-  height: 100%;
 
-  border: 2px solid lightblue;
-  border-collapse: collapse;
-  
+#cal-wrap{
+  width:fit-content;
+  height:600px;
 }
+ 
+#calendar{
+  width:fit-content;
+  height:100%;
+  border :1px solid #f55;
+  border-collapse: collapse;
+}
+
+ 
 #calendar tr.head td {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  background: green;
-  padding: 25px;
+   padding: 10px;
+   border :1px solid #f55;
+   border-collapse: collapse;
+  background: #f37070;
+ 
   text-align: center;
 }
 #calendar tr.day td {
   border: 1px solid #ddd;
-  width: 14.28%;
-  padding: 15px 5px;
+  padding: 10px;
+  border :1px solid #f55;
+  border-collapse: collapse;
   vertical-align: top;
 }
 #calendar tr.day td:hover {
@@ -109,5 +121,122 @@ H2{
   background: #ea4c4c;
   color: #fff;
 }
+  
+ 
+
+
+
+@media screen and (max-width: 800px) {
+ 
+  #heading{
+    text-align: center;
+    
+    font-size: 20PX;
+   }
+  #cal-date { display: flex; justify-content: space-between;   border: #ea4c4c 2px solid; border-radius: 4px;}
+  #cal-mth, #cal-yr {
+    box-sizing: border-box;
+    border: 2px solid black;
+    background-color:GRAY;
+    border-radius:4px ;
+    font-size: 1.2em;
+    border: 2px solid lightsalmon;
+   
+  }
+   
+  .main{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100vw;
+    height: 100vh;
+    flex-direction:column;
+   
+  }
+  #cal-wrap{
+  width:fit-content;
+    height:600px;
+   
+  }
+   
+  
+  }
+  #calendar{
+    width:fit-content;
+    height:100%;
+   
+   
+  }
+  
+   
+  #calendar tr.head td {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+     
+    background: #f37070;
+   
+    text-align: center;
+  }
+  #calendar tr.day td {
+    border: 1px solid #ddd;
+  
+    vertical-align: top;
+  }
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width:400px) {
+  
+ #heading{
+  text-align: center;
+  
+  font-size: 15PX;
+ }
+#cal-date { display: flex; justify-content: space-between;   border: #ea4c4c 2px solid; border-radius: 4px;}
+#cal-mth, #cal-yr {
+  box-sizing: border-box;
+  border: 2px solid black;
+  background-color:GRAY;
+  border-radius:4px ;
+  font-size: 1.2em;
+  border: 2px solid lightsalmon;
+ 
+}
+#cal-wrap{
+   width:fit-content;
+  height:600px;
+ 
+}
+
+.main{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100vw;
+  height: 100vh;
+  flex-direction:column;
+ 
+}
+ 
+#calendar{
+  width:100%;
+  height:100%;
+ 
+}
 
  
+#calendar tr.head td {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+   padding: 3px;
+  background: #f37070;
+ 
+  text-align: center;
+}
+#calendar tr.day td {
+  border: 1px solid #ddd;
+  padding: 3px;
+  vertical-align: top;
+}
+}
